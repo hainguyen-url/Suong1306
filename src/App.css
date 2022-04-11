@@ -1,0 +1,56 @@
+.body {
+  height: 1000px;
+  background-image: linear-gradient(#c6ffdd, #fbd786, #f7797d);
+}
+.App {
+  text-align: center;
+  font-size: 18px;
+}
+.App a{
+  text-decoration: none;
+  margin-top: 20px;
+}
+.container {
+  margin-left: 30px;
+}
+.content {
+ margin-top: 30px;
+}
+a{
+  color: #f7797d;
+}
+.title {
+  margin: 10px;
+  border: 1px solid ;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+}
+.title:hover {
+  cursor: pointer;
+}
+.comment {
+  font-size: 14px;
+  color:rgba(146, 147, 150, 0.5);
+  text-align: start ;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
