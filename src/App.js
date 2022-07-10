@@ -1,33 +1,18 @@
+import Main from './component/MainComponent';
 import './grid.css';
 import './App.css';
-import { Navbar, NavbarBrand} from 'reactstrap';
-import {STAFFS} from './shared/staffs';
-import { Staff } from './component/list';
-import { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 
-class App extends Component {
-  constructor(props){
-    super(props);
-
-    this.state={
-      staffs: STAFFS,
-  };
-  }
-  render(){
+function App(props){
+     
   return (
-    <div className="body">
+    <BrowserRouter>
       <div className="App">
-        <Navbar dark color='primary'>
-          <div className='grid'>
-            <NavbarBrand href='/'>Ứng dụng quản lý nhân sự v1.0</NavbarBrand>
-          </div>
-        </Navbar>
-        <Staff staffs={this.state.staffs}/>
+        <Main/>
       </div>
-    </div>
+    </BrowserRouter>
   );
-  }
-}
 
+}
 export default App;
