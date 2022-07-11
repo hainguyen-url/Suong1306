@@ -20,7 +20,7 @@ function Department(props){
         <div className="grid wide">
             <div className="row">
                 <Breadcrumb>
-                    <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem>
+                    <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem> / 
                     <BreadcrumbItem active>Phòng ban</BreadcrumbItem>
                 </Breadcrumb>              
             </div>

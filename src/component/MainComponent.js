@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import { STAFFS } from '../shared/staffs';
 import { Staff } from './list';
 import { ROLE } from '../shared/staffs';
@@ -18,8 +18,11 @@ function Main(props) {
   const [ departments, setdepartments] = useState(DEPARTMENTS);
   
   const StaffWithId = ({match}) => {
-    return(
-      <ListDetail staffs={staffs.filter((staff) => staff.id ===parseInt(match.params.staffId,10))[0]}/>
+    const { staffId } = useParams();
+    return (
+      <ListDetail 
+          staffs={staffs.filter((staffs) => staffs.id === staffId)}
+      />
     );
   }
   return (
@@ -28,7 +31,7 @@ function Main(props) {
         <Routes>
           <Route>
             <Route path='/staff' element={<Staff staffs={staffs}/>}/>
-            <Route exact path='/staff/:staffId' element={<StaffWithId/>}/>
+            <Route exact path='/staff/:staffId' element={<StaffWithId staffs={staffs}/>}/>
             <Route exact path='/department' element={<Department departments={departments}/>}/>
             <Route exact path='/payroll' element={<Payroll staffs={staffs}/>}/>
           </Route>

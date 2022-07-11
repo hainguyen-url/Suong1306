@@ -62,3 +62,16 @@ address{
 .header{
   margin-bottom: 30px;
 }
+.breadcrumb{
+  list-style-type: none;
+  display: flex;
+}
+.breadcrumb-item a{
+  text-decoration: none;
+  margin-right: 3px;
+  color: #7d7979;
+}
+
+.active{
+  text-decoration: none;
+}
