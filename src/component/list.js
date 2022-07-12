@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card, CardImg, Breadcrumb, BreadcrumbItem } from "reactstrap";
-import moment from "moment";
 import { Link } from "react-router-dom";
 
 
@@ -8,7 +7,7 @@ import { Link } from "react-router-dom";
   return (
           <Card>
             <Link to={`/staff/${staffs.id}`}>
-              <img Width="100%" src={staffs.image} />
+              <img width="100%" src={staffs.image} alt='' />
               <div className="title">{staffs.name}</div>
             </Link>
           </Card>

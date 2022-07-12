@@ -6,11 +6,13 @@ import { Media } from "reactstrap";
 function Department(props){
     const Departments = props.departments.map((departments) => {
         return (
-            <div className="col l-3 m-5 c-12">
-                <Card>
-                    <h3>{departments.name}</h3>
-                    <p>Số lượng nhân viên: {departments.numberOfStaff}</p>
-                </Card>
+            <div className="col l-4 m-5 c-12">
+                
+                    <Card>
+                        <h3>{departments.name}</h3>
+                        <p>Số lượng nhân viên: {departments.numberOfStaff}</p>
+                    </Card>
+                
             </div>
         );
     }
@@ -20,11 +22,11 @@ function Department(props){
         <div className="grid wide">
             <div className="row">
                 <Breadcrumb>
-                    <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem> / 
+                    <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem> 
                     <BreadcrumbItem active>Phòng ban</BreadcrumbItem>
                 </Breadcrumb>              
             </div>
-            <div className="row row-content">
+            <div className="row">
                 {Departments}
             </div>
         </div>

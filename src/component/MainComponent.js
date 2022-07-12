@@ -21,17 +21,18 @@ function Main(props) {
     const { staffId } = useParams();
     return (
       <ListDetail 
-          staffs={staffs.filter((staffs) => staffs.id === staffId)}
+          staffs={staffs.filter((staffs) => staffs.id === Number(staffId))[0]}
       />
     );
   }
+  
   return (
       <div className="App">
         <Header/>
         <Routes>
           <Route>
             <Route path='/staff' element={<Staff staffs={staffs}/>}/>
-            <Route exact path='/staff/:staffId' element={<StaffWithId staffs={staffs}/>}/>
+            <Route exact path='/staff/:staffId' element={<StaffWithId/>}/>
             <Route exact path='/department' element={<Department departments={departments}/>}/>
             <Route exact path='/payroll' element={<Payroll staffs={staffs}/>}/>
           </Route>

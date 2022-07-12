@@ -2,13 +2,14 @@
   margin: 0px auto;
   padding: 0px auto;
 }
-.row-content{
+/* .row-content{
   margin: 0px auto;
   padding: 50px 0px;
   border-bottom: 1px ridge;
   min-height: 400px;
-}
+} */
 .footer{
+  height: 100%;
   background-color: #d1c4e9;
   margin: 0px auto;
   padding: 20px 0px;
@@ -26,24 +27,18 @@ address{
 }
 .navbar-dark{
   background-color: #512DA8;
-  display: flex;
   color: antiquewhite;
 }
 .navbar-nav>li{
   list-style-type: none;
   margin: 0px 10px;
-  display: inline;
 }
 .nav-item>a{
   color: white;
   text-decoration: none;
 }
-.btn {
-  border: #0f0f0f 1px;
-}
 .card{
   border: 1px solid rgb(214, 214, 214);
-  margin: 10px 10px;
   border-radius: 4px;
 }
 .card h3{
@@ -56,12 +51,7 @@ address{
   text-decoration: none;
   justify-content: center;
 }
-.footer{
-  margin-top: 30px;
-}
-.header{
-  margin-bottom: 30px;
-}
+
 .breadcrumb{
   list-style-type: none;
   display: flex;
@@ -71,7 +61,25 @@ address{
   margin-right: 3px;
   color: #7d7979;
 }
-
 .active{
   text-decoration: none;
 }
+.title{
+  text-align: center;
+  color: #0f0f0f;
+}
+.role{
+  background-color: rgba(67,67,67, 0.1);
+  height: 30px;
+  margin: 0px 20px 10px;
+}
+.imginfor{
+  margin-left: 30px;
+}
+.fa-btn{
+  color: white;
+}
+.text-center{
+  margin-top: 15%;
+}
+

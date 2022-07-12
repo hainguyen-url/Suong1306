@@ -12,7 +12,9 @@ import { Media } from "reactstrap";
                     <p>Mã nhân viên: {staffs.id}</p>
                     <p>Hệ số lương: {staffs.salaryScale}</p>
                     <p>Số ngày làm thêm: {staffs.overTime}</p>
-                    <p>luong: {staffs.salaryScale} * 3000000 + {staffs.overTime} * 200000</p>
+                    <div className='role'>
+                    <p>Lương: </p>
+                    </div>
                 </Card>
             </div>
         );
@@ -21,11 +23,11 @@ import { Media } from "reactstrap";
         <div className="container">
             <div className="row">
                 <Breadcrumb>
-                    <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem>/ 
+                    <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem>
                     <BreadcrumbItem active>Bảng lương</BreadcrumbItem>
                 </Breadcrumb>              
             </div>
-            <div className="row row-content">
+            <div className="row">
                 {staffs}
             </div>
         </div>
