@@ -7,20 +7,20 @@ import { Media } from "reactstrap";
     const staffs = props.staffs.map((staffs) =>{
         return(
             <div className="col l-3 m-5 c-12">
-                <Card>
+                <div className="card">
                     <h3>{staffs.name}</h3>
                     <p>Mã nhân viên: {staffs.id}</p>
                     <p>Hệ số lương: {staffs.salaryScale}</p>
                     <p>Số ngày làm thêm: {staffs.overTime}</p>
                     <div className='role'>
-                    <p>Lương: </p>
+                    {/* <p>Lương: salaryScale * 3000000 + overTime * 200000</p> */}
                     </div>
-                </Card>
+                </div>
             </div>
         );
     });
     return(
-        <div className="container">
+        <div className="grid wide">
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem><Link to="/staff">Nhân viên</Link></BreadcrumbItem>

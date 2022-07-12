@@ -6,13 +6,11 @@ import { Media } from "reactstrap";
 function Department(props){
     const Departments = props.departments.map((departments) => {
         return (
-            <div className="col l-4 m-5 c-12">
-                
-                    <Card>
+            <div className="col l-3 m-5 c-12">
+                    <div className='card'>
                         <h3>{departments.name}</h3>
                         <p>Số lượng nhân viên: {departments.numberOfStaff}</p>
-                    </Card>
-                
+                    </div>
             </div>
         );
     }
